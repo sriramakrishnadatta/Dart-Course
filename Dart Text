@@ -1,0 +1,211 @@
+main() {
+  print('Hello Dart');
+  
+  /*
+   * Types of dart comments: 
+   * dart single line (//) comment
+   * dart multiline (/*...*/) comment
+   * dart documnentation (/// or /**...*/) comment
+   * 
+   * variables :
+   * 
+   * syntax : type variable_name;
+   * 
+   * types may be :
+   * 
+   * Integer
+   * Double
+   * String
+   * Boolean
+   * Lists
+   * Maps
+   * 
+   * conditions for declaring variable:
+   * 
+   * variable name or identifiers can't be the keyword.
+   * variable name or identifiers can contain alphabets and numbers.
+   * variale name or identifiers can not contain spaces and special charecters,
+   * except the underscore(_) and the dollar($) sign.
+   * variable name or identifiers can not begin with numbers.
+   * 
+   * Note: 
+   * dart supports type-checking
+   * 
+   * Dynamic type variable:
+   * syntax: dynamic variable_name;
+   * 
+   * final and const keyword:
+   * syntax for final:
+   * a. without data type: final variable_name;
+   * b. with data type: final data_type variable_name;
+   * 
+   * syntax for const:
+   * a. without data type: const variable_name;
+   * b. with data type: const data_type variable_name;
+   * 
+   * Types of operators:
+   * 
+   * artithametic operators:
+   * addition +
+   * subtraction -
+   * unary minus -expr
+   * multiply *
+   * division /
+   * division(floor division) ~/
+   * modulus %
+   * 
+   * relational operators:
+   * greater than >
+   * less than <
+   * greater than or equal to >=
+   * less than or equal to <=
+   * equal to ==
+   * not equal to !=
+   * 
+   * type test operators:
+   * is -- gives boolean value true as output if the object has specific type
+   * is! - is not (vise versa for above)
+   * 
+   * bitwise operators:
+   * bitwise AND &
+   * bitwise OR |
+   * bitwise XOR ^
+   * bitwise NOT ~
+   * left shift <<
+   * right shift >>
+   *
+   * assignment operators:
+   * equal to =
+   * assignment operator ??= -- assign value only if t is null
+   * 
+   * logical operators:
+   * AND operator &&
+   * OR operator ||
+   * NOT operator !
+   * 
+   * conditional operators:
+   * condition ? expression_1 : expression_2 --
+   *      it is a simple version of if-else statement.
+   *      if the condition is true then expression_1 else expression_2 is executed.
+   * expression_1 ?? expression_2 --
+   *      expression_1 is not null returns its value else expression_2 is returned.
+   * 
+   * cascade notation operator:
+   * cascading method .. 
+   *      it is used to perform multiple methods on the same object.
+   *  
+   * Standard Input Output:
+   * standard input:
+   * we can take standard input from the user through the console va the use of
+   * .readLineSync() function.
+   * to take input from the console we need to import a library, dart:io from libraries of dart.
+   * 
+   * about Stdin class:
+   * this class allows the user to read data from standard input in both synchronus and
+   * asynchronous ways.
+   * the method readLineSync() is one of the methods used to take input from the user.
+   * 
+   * Taking string value as input:
+   * eg: String? name = stdin.readLineSync(); 
+   * -- null safety in name String
+   * 
+   * Taking integer value as input:
+   * eg: int? n = int.parse(stdin.readLineSync()!);
+   * -- ? and ! are for null safety 
+   * 
+   * Standard Output:
+   * there are two ways to display output to console:
+   * using print statement
+   * using stdout.Write() statement
+   * 
+   * Note:
+   * the print() ststement brings the cursor to next line
+   * while stdout.Write() dont bring the cursor to the next line,
+   * it remains on the same line.
+   * 
+   * Data Types ;
+   * 
+   * Number : int, double, num
+   * numbers in dart are used to reprasent numeric literals.
+   * 
+   * Strings : String
+   * Strings reprasent a sequence of charecters.
+   * 
+   * Booleans : bool
+   * it reprasents boolean values true or false.
+   * 
+   * Lists : List
+   * it is an ordered group of objects.
+   * 
+   * Maps : Map
+   * it reprasents a set of values as key-value pairs.
+   * 
+   * Note:
+   * if the type of variable is not specified, the variables type is dynamic.
+   * 
+   * Numbers:
+   * int : int data type is used to reprasent whole numbers.
+   * syntax : int var_name;
+   * double : double data type is used to reprasent 64-bit floating point numbers.
+   * syntax : double var_name;
+   * 
+   * Note: 
+   * the num type is an inherited data type of the int and double types.
+   * 
+   * parsing:
+   * the parse() function is used parsing a string containing numeric literal and convert to the number.
+   * 
+   * properties:
+   * hashcode -- it is used to get the hash code of given number.
+   * isFinite -- if given number is finite then returns true.
+   * isInfinite -- if given number is infinite then returns true.
+   * isNan -- if given number is non-negative then returns true.
+   * isNegative -- if given number is negative then returns true.
+   * sign -- is used to get -1,0,1 depending upon the sign of given number.
+   * isEven -- if given number is even return true.
+   * isOdd -- if given number is odd then return true.
+   * 
+   * Methods:
+   * abs() -- gives the absolute value of given number.
+   * ceil() -- gives the ceiling value of the given number.
+   * floor() -- gives the floor value of the given numbe.
+   * compareTo() -- compares the value with other numbers.
+   * remainder() -- gives the truncated remainder after dividing.
+   * round() -- returns the round of number.
+   * toDouble() -- double equivalent reprasentation of number.
+   * toInt() -- integer equivelant reprasentation of the number.
+   * toString() -- String equivalent reprasentation of the number.
+   * truncate() -- this returns the integer after discarding fraction digits.
+   * 
+   * Logical Reprasentation of List:
+   * The index of the element reprasents the position of the specific data and 
+   * when the list of that index is called the element is displayed.
+   * 
+   * Generally the list item is called from its index. 
+   * 
+   * Types of List :
+   * there are broadly two types of lists on the basis of their length:
+   * 1. Fixed Length List:
+   * -- here, the size of the list is declared initially and cant be changed during runtime.
+   * 
+   * 2. Growable List :
+   * -- this type list is declared without declaring the size of the list.
+   * -- its length can be changed during runtime.
+   * 
+   * adding a value to the growable list : .add()
+   * adding multiple values to the growable list : .addAll([])
+   * adding a value to the growable list at a specific index : .insert(index, value)
+   * adding multiple values to the growable list at specific indexes : .insertAll(index, [])
+   * 
+   * Types of List(Basics of its Dimensions) :
+   * 1-D List
+   * 2-D List
+   * 3-D List
+   * Multidimensional List
+   * 
+   * Note:
+   * one can create an n-dimensional list by using the List.generate() method
+   * 
+   * 
+  */
+}
